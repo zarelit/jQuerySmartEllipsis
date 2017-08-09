@@ -131,7 +131,7 @@
             }
 
             if (el.css("overflow") === "hidden") {
-                content = (el.html() === el.data('trimText')) ? el.data('origText') : el.html();
+                content = (el.data('origText') != null) ? el.data('origText') : el.html();
                 tempElement = $(this.cloneNode(true))
                     .hide()
                     .css('position', 'absolute')
